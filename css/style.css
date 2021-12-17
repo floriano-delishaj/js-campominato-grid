@@ -18,9 +18,9 @@
     display: none;
 } */
 
-.container.show {
+/* .container.show {
     display: block;
-}
+} */
 
 .container.small {
     width: calc(75px * 7);
@@ -39,9 +39,13 @@
     flex-wrap: wrap;
 }
 
-button {
+.button {
+    background-color: rebeccapurple;
     padding: 7px 14px;
     margin: 15px;
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 5px;
 }
 
 .buttons {

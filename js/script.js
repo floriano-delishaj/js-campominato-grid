@@ -4,8 +4,9 @@ function createBox (output, x) {
     newBox.innerHTML = x;
     output.append(newBox);
     newBox.addEventListener('click', function () {
-        this.classList.toggle('light-blue');  //toggle aggiunge o rimuove classi (come un bottone)
-    })                                       //invece add aggiunge e basta
+        this.classList.toggle('light-blue');  //toggle aggiunge o rimuove classi (come un bottone) //invece add aggiunge e basta
+        this.innerHTML = ''
+    })                                       
 }
 
 function createGrid (max) {
@@ -21,20 +22,23 @@ const selectionOne = document.getElementById('selection-1');
 const selectionTwo = document.getElementById('selection-2');
 const selectionThree = document.getElementById('selection-3');
 
-alert('Premi un pulsante per iniziare a giocare');
+// alert('Premi un pulsante per iniziare a giocare');
 
 selectionOne.addEventListener('click', function () {
+    containerOutput.innerHTML = ''; //ripulire la griglia
     createGrid(100);
     container.classList.remove('small', 'medium');
     container.classList.add('big');
 })
 selectionTwo.addEventListener('click', function () {
+    containerOutput.innerHTML = '';
     createGrid(81);
     container.classList.remove('big', 'small');
     container.classList.add('medium');
 })
 
 selectionThree.addEventListener('click', function () {
+    containerOutput.innerHTML = '';
     createGrid(49);
     container.classList.remove('big', 'medium');
     container.classList.add('small');
